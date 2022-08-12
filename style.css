@@ -1,0 +1,90 @@
+body    {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+header  {
+    padding: 30px;
+    font-size: 50px;
+}
+
+#playerstatus   {
+    font-size: 20px;
+    padding-bottom: 30px;
+    font-family: Helvetica;
+}
+
+
+#gameboard  {
+    display: grid;
+    width: 300px;
+    border: 2px solid black;
+    grid-template: 100px 100px 100px / 100px 100px 100px; 
+}
+
+.square {
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    pointer-events: "";
+
+}
+
+.square:hover   {
+    background-color: rgb(240, 237, 233);
+    cursor: pointer;
+}
+
+.disablegameboard {
+  pointer-events: none;
+}
+
+
+/*Quick styled button from https://getcssscan.com/css-buttons-examples*/
+#resetbutton {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  transition: all 250ms;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+#resetbutton:hover,
+#resetbutton:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+#resetbutton:hover {
+  transform: translateY(-1px);
+}
+
+#resetbutton:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
